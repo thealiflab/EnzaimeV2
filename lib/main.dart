@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:enzaimev2/screens/opening_screen.dart';
+import 'screens/opening_screen.dart';
+import 'screens/login_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 //      theme: ThemeData(
 //        primarySwatch: Colors.blue,
 //      ),
-      home: OpeningScreen(),
+      home: LoginScreen(),
     );
   }
 }
