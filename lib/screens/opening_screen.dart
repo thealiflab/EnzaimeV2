@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:enzaimev2/components/icons.dart';
 
 class OpeningScreen extends StatelessWidget {
+  static const String id = "openning_screen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
