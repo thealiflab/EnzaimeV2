@@ -5,10 +5,6 @@ import 'package:enzaimev2/components/text_field_container.dart';
 import 'package:enzaimev2/components/gradient_button.dart';
 import 'package:enzaimev2/components/social_floating_button.dart';
 
-//TODO-2: Add border focus functionality
-//TODO-3: Screen overflow have to solve
-//TODO-4: Refactor
-
 class LoginScreen extends StatelessWidget {
   static const String id = "login_screen";
 
@@ -78,6 +74,7 @@ class LoginScreen extends StatelessWidget {
                         obscureText: true,
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'পাসওয়ার্ড',
+                          suffixIcon: Icon(Icons.visibility_off),
                         ),
                       ),
                     ),

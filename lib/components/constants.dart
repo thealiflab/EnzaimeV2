@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 const kTextFieldDecoration = InputDecoration(
-//  border: InputBorder.none,
   contentPadding: EdgeInsets.symmetric(
     vertical: 20,
     horizontal: 18,
