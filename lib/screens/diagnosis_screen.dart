@@ -1,4 +1,6 @@
+import 'package:enzaimev2/components/icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DiagnosisScreen extends StatefulWidget {
   static const String id = 'diagnosis_screen';
@@ -27,9 +29,16 @@ class _DiagnosisScreenState extends State<DiagnosisScreen> {
         ),
         elevation: 8,
       ),
-      body: Center(
-        child: Container(
-          child: Text("Diagnosis Screen"),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SvgPicture.asset(
+              drbot,
+              width: 30,
+              height: 30,
+            ),
+          ],
         ),
       ),
     );
