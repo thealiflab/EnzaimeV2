@@ -39,61 +39,82 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: Icon(
-              Icons.home,
-              color: _currentIndex == 0 ? Colors.blue : Colors.black12,
+            icon: SvgPicture.asset(
+              home,
+              height: 22.0,
+              width: 22.0,
+              allowDrawingOutsideViewBox: true,
             ),
-            title: Text(
-              "হোম",
-              style: TextStyle(
-                color:
-                    _currentIndex == 0 ? Color(0xFF278CE3) : Color(0xFF98ADB2),
+            title: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Text(
+                "হোম",
+                style: TextStyle(
+                  color: _currentIndex == 0
+                      ? Color(0xFF278CE3)
+                      : Color(0xFF98ADB2),
+                ),
               ),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.rate_review,
-                color: _currentIndex == 1 ? Colors.blue : Colors.black12),
-//            SvgPicture.asset(
-//              heart,
-//              height: 20.0,
-//              width: 20.0,
-//              allowDrawingOutsideViewBox: true,
-//            ),
-            title: Text(
-              "রোগ নির্ণয়",
-              style: TextStyle(
-                color:
-                    _currentIndex == 1 ? Color(0xFF278CE3) : Color(0xFF98ADB2),
-              ),
+            icon: SvgPicture.asset(
+              heartSel,
+              height: 22.0,
+              width: 22.0,
+              allowDrawingOutsideViewBox: true,
             ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search,
-                color: _currentIndex == 2 ? Colors.blue : Colors.black12),
 
-//            SvgPicture.asset(
-//              doctor,
-//              height: 20.0,
-//              width: 20.0,
-//              allowDrawingOutsideViewBox: true,
-//            ),
-            title: Text(
-              "ডাক্তার খুঁজুন",
-              style: TextStyle(
-                color:
-                    _currentIndex == 0 ? Color(0xFF278CE3) : Color(0xFF98ADB2),
+//            Icon(Icons.rate_review,
+//                color: _currentIndex == 1 ? Colors.blue : Colors.black12),
+
+            title: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Text(
+                "রোগ নির্ণয়",
+                style: TextStyle(
+                  color: _currentIndex == 1
+                      ? Color(0xFF278CE3)
+                      : Color(0xFF98ADB2),
+                ),
               ),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person,
-                color: _currentIndex == 3 ? Colors.blue : Colors.black12),
-            title: Text(
-              "প্রোফাইল",
-              style: TextStyle(
-                color:
-                    _currentIndex == 0 ? Color(0xFF278CE3) : Color(0xFF98ADB2),
+            icon: SvgPicture.asset(
+              doctorsearch,
+              height: 22.0,
+              width: 22.0,
+              allowDrawingOutsideViewBox: true,
+            ),
+            title: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Text(
+                "ডাক্তার খুঁজুন",
+                style: TextStyle(
+                  color: _currentIndex == 0
+                      ? Color(0xFF278CE3)
+                      : Color(0xFF98ADB2),
+                ),
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              profile,
+              height: 22.0,
+              width: 22.0,
+              allowDrawingOutsideViewBox: true,
+            ),
+            title: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Text(
+                "প্রোফাইল",
+                style: TextStyle(
+                  color: _currentIndex == 0
+                      ? Color(0xFF278CE3)
+                      : Color(0xFF98ADB2),
+                ),
               ),
             ),
           ),
