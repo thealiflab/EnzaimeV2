@@ -33,6 +33,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
     return Scaffold(
       body: _bottomNavScreen[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         elevation: 12.0,
         onTap: onTappedOption,
         currentIndex: _currentIndex,
