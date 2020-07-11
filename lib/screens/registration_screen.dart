@@ -5,8 +5,18 @@ import 'package:enzaimev2/components/text_field_container.dart';
 import 'package:enzaimev2/components/gradient_button.dart';
 import 'package:enzaimev2/components/social_floating_button.dart';
 
-class RegistrationScreen extends StatelessWidget {
+class RegistrationScreen extends StatefulWidget {
   static const String id = "registration_screen";
+
+  @override
+  _RegistrationScreenState createState() => _RegistrationScreenState();
+}
+
+class _RegistrationScreenState extends State<RegistrationScreen> {
+  String _username;
+  String _email;
+  String _password;
+  String _confirmPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +60,18 @@ class RegistrationScreen extends StatelessWidget {
                   children: <Widget>[
                     TextFieldContainer(
                       child: TextField(
+                        onChanged: (value) {
+                          _username = value;
+                        },
                         decoration: kTextFieldDecoration,
                       ),
                     ),
                     TextFieldContainer(
                       child: TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        onChanged: (value) {
+                          _email = value;
+                        },
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'ইমেইল',
                         ),
@@ -62,6 +79,9 @@ class RegistrationScreen extends StatelessWidget {
                     ),
                     TextFieldContainer(
                       child: TextField(
+                        onChanged: (value) {
+                          _password = value;
+                        },
                         obscureText: true,
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'পাসওয়ার্ড',
@@ -71,6 +91,9 @@ class RegistrationScreen extends StatelessWidget {
                     ),
                     TextFieldContainer(
                       child: TextField(
+                        onChanged: (value) {
+                          _confirmPassword = value;
+                        },
                         obscureText: true,
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'কনফার্ম পাসওয়ার্ড',
@@ -84,7 +107,12 @@ class RegistrationScreen extends StatelessWidget {
                   height: 15,
                 ),
                 GradientButton(
-                  onTap: () {},
+                  onTap: () {
+                    print(_username);
+                    print(_email);
+                    print(_password);
+                    print(_confirmPassword);
+                  },
                   buttonText: "রেজিস্ট্রেশন",
                 ),
                 SizedBox(

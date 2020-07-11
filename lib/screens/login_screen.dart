@@ -5,8 +5,17 @@ import 'package:enzaimev2/components/text_field_container.dart';
 import 'package:enzaimev2/components/gradient_button.dart';
 import 'package:enzaimev2/components/social_floating_button.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   static const String id = "login_screen";
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  String _username;
+  String _password;
+  bool _seePassword = false; //TODO
 
   @override
   Widget build(BuildContext context) {
@@ -66,12 +75,18 @@ class LoginScreen extends StatelessWidget {
                   children: <Widget>[
                     TextFieldContainer(
                       child: TextField(
+                        onChanged: (value) {
+                          _username = value;
+                        },
                         decoration: kTextFieldDecoration,
                       ),
                     ),
                     TextFieldContainer(
                       child: TextField(
-                        obscureText: true,
+                        onChanged: (value) {
+                          _password = value;
+                        },
+                        obscureText: !_seePassword,
                         decoration: kTextFieldDecoration.copyWith(
                           hintText: 'পাসওয়ার্ড',
                           suffixIcon: Icon(Icons.visibility_off),
@@ -101,7 +116,10 @@ class LoginScreen extends StatelessWidget {
                   height: 40,
                 ),
                 GradientButton(
-                  onTap: () {},
+                  onTap: () {
+                    print(_username);
+                    print(_password);
+                  },
                   buttonText: "সাইন ইন",
                 ),
                 SizedBox(
