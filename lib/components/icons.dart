@@ -8,3 +8,4 @@ final String home = 'assets/icons/home.svg';
 final String heartSel = 'assets/icons/heart.svg';
 final String doctorsearch = 'assets/icons/doctor.svg';
 final String profile = 'assets/icons/profile.svg';
+final String homeTop = 'assets/icons/homescreentopdesign.svg';

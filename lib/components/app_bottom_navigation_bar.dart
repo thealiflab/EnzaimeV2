@@ -65,10 +65,6 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
               width: 22.0,
               allowDrawingOutsideViewBox: true,
             ),
-
-//            Icon(Icons.rate_review,
-//                color: _currentIndex == 1 ? Colors.blue : Colors.black12),
-
             title: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
@@ -93,7 +89,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
               child: Text(
                 "ডাক্তার খুঁজুন",
                 style: TextStyle(
-                  color: _currentIndex == 0
+                  color: _currentIndex == 2
                       ? Color(0xFF278CE3)
                       : Color(0xFF98ADB2),
                 ),
@@ -112,7 +108,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
               child: Text(
                 "প্রোফাইল",
                 style: TextStyle(
-                  color: _currentIndex == 0
+                  color: _currentIndex == 3
                       ? Color(0xFF278CE3)
                       : Color(0xFF98ADB2),
                 ),

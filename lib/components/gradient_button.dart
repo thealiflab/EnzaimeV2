@@ -7,10 +7,10 @@ class GradientButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    Size _size = MediaQuery.of(context).size;
     return Container(
       height: 62.0,
-      width: size.width * 0.90,
+      width: _size.width * 0.90,
       child: RaisedButton(
         elevation: 13,
         onPressed: onTap,
@@ -28,7 +28,7 @@ class GradientButton extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.0)),
           child: Container(
             constraints:
-                BoxConstraints(maxWidth: size.width * 0.9, minHeight: 50.0),
+                BoxConstraints(maxWidth: _size.width * 0.9, minHeight: 50.0),
             alignment: Alignment.center,
             child: Text(
               buttonText,
