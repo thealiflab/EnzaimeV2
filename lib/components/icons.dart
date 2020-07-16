@@ -9,3 +9,7 @@ final String heartSel = 'assets/icons/heart.svg';
 final String doctorsearch = 'assets/icons/doctor.svg';
 final String profile = 'assets/icons/profile.svg';
 final String homeTop = 'assets/icons/homescreentopdesign.svg';
+final String diag = 'assets/icons/diag.svg';
+final String doctor2 = 'assets/icons/doctor2.svg';
+final String nutritions = 'assets/icons/nutritions.svg';
+final String more = 'assets/icons/more.svg';
