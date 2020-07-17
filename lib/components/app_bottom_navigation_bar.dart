@@ -40,12 +40,19 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
         items: [
           BottomNavigationBarItem(
             backgroundColor: Colors.white,
-            icon: SvgPicture.asset(
-              home,
-              height: 22.0,
-              width: 22.0,
-              allowDrawingOutsideViewBox: true,
-            ),
+            icon: _currentIndex == 0
+                ? SvgPicture.asset(
+                    homeSel,
+                    height: 22.0,
+                    width: 22.0,
+                    allowDrawingOutsideViewBox: true,
+                  )
+                : SvgPicture.asset(
+                    home,
+                    height: 22.0,
+                    width: 22.0,
+                    allowDrawingOutsideViewBox: true,
+                  ),
             title: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
@@ -59,12 +66,19 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
             ),
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              heartSel,
-              height: 22.0,
-              width: 22.0,
-              allowDrawingOutsideViewBox: true,
-            ),
+            icon: _currentIndex == 1
+                ? SvgPicture.asset(
+                    heartSel,
+                    height: 22.0,
+                    width: 22.0,
+                    allowDrawingOutsideViewBox: true,
+                  )
+                : SvgPicture.asset(
+                    heart,
+                    height: 22.0,
+                    width: 22.0,
+                    allowDrawingOutsideViewBox: true,
+                  ),
             title: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Text(
